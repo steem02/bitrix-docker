@@ -21,4 +21,4 @@ echo "Config"
 cp -f .env_template .env
 
 echo "Run"
-docker-compose up -d
+docker compose up -d
