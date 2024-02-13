@@ -10,11 +10,11 @@ set -e
 #hash docker-compose 2>/dev/null || { curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose; }
 
 echo "Create folder struct"
-mkdir -p ./www/bitrix && \
-curl -fsSL https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php -o ./www/bitrix/bitrixsetup.php && \
-cd ./www/ && \
+mkdir -p /var/www/bitrix && \
+curl -fsSL https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php -o /var/www/bitrix/bitrixsetup.php && \
+cd /var/www/ && \
 git clone https://github.com/steem02/bitrix-docker.git && \
-cd .. && chmod -R 775 www/ && chown -R root:www-data www/ && \
+chmod -R 775 /var/www/bitrix && chown -R root:www-data /var/www/bitrix && \
 cd ./www/bitrix-docker
 
 echo "Config"
