@@ -14,8 +14,8 @@ mkdir -p /var/www/bitrix && \
 curl -fsSL https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php -o /var/www/bitrix/bitrixsetup.php && \
 cd /var/www/ && \
 git clone https://github.com/steem02/bitrix-docker.git && \
-chmod -R 775 /var/www/bitrix && chown -R root:www-data /var/www/bitrix && \
-cd ./www/bitrix-docker
+chmod -R 775 /var/www/bitrix && chown -R root:staff /var/www/bitrix && \
+cd /var/www/bitrix-docker
 
 echo "Config"
 cp -f .env_template .env
