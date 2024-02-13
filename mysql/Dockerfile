@@ -1,4 +1,4 @@
-FROM bitnami/mysql:5.7
+FROM mysql:5.7
 
 MAINTAINER svsteem
 
