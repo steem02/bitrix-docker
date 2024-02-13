@@ -24,8 +24,7 @@ services:
         volumes_from:
             - source
         ports:
-            - '${INTERFACE}:80:80'
-            - '${INTERFACE}:443:443'
+            - '${INTERFACE}:81:80'
         links:
             - php
         networks:
@@ -44,7 +43,7 @@ services:
         volumes_from:
             - source
         ports:
-            - '${INTERFACE}:3306:3306'
+            - '${INTERFACE}:3307:3306'
         environment:
             MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
@@ -79,7 +78,7 @@ services:
         links:
             - db:db
         ports:
-            - '${INTERFACE}:8080:80'
+            - '${INTERFACE}:8083:80'
         environment:
             UPLOAD: 1024M # upload_max_filesize, post_max_size
             TZ: Europe/Moscow
