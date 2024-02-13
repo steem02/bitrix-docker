@@ -11,11 +11,11 @@ set -e
 
 echo "Create folder struct"
 mkdir -p ./www/bitrix && \
-curl -fsSL https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php -o /var/www/bitrix/bitrixsetup.php && \
+curl -fsSL https://www.1c-bitrix.ru/download/scripts/bitrixsetup.php -o ./www/bitrix/bitrixsetup.php && \
 cd ./www/ && \
-git clone https://github.com/bitrixdock/bitrixdock.git && \
-cd /var/ && chmod -R 775 www/ && chown -R root:www-data www/ && \
-cd /var/www/bitrixdock
+git clone https://github.com/steem02/bitrix-docker.git && \
+cd .. && chmod -R 775 www/ && chown -R root:www-data www/ && \
+cd ./www/bitrix-docker
 
 echo "Config"
 cp -f .env_template .env
