@@ -1,8 +1,8 @@
-FROM mysql:8.0
+FROM mysql:5.7
 
-MAINTAINER vitams
+MAINTAINER svsteem
 
-COPY my.cnf /etc/mysql/conf.d/my.cnf
+ADD my.cnf /etc/mysql/conf.d/my.cnf
 
 CMD ["mysqld"]
 
