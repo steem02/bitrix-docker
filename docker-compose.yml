@@ -99,7 +99,6 @@ services:
             - db:/var/lib/mysql
             - cache:/var/lib/memcached
             - ${SITE_PATH}:/var/www/bitrix
-            - /etc/localtime:/etc/localtime/:ro
         networks:
             - bitrix
 
